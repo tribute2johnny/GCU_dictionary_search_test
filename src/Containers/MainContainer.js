@@ -26,6 +26,10 @@ const MainContainer = () => {
         addFavourite(data)
     }
 
+    useEffect(() => {
+        if (favouriteWords.length > 0) {localStorage.setItem('favs', JSON.stringify(favouriteWords))}
+    }, [favouriteWords]);
+
     return (
         <div>
             <header>Search The Dictionary</header>
