@@ -56,7 +56,7 @@ const MainContainer = () => {
 
             <div>
                 <h4>{data.word}</h4>
-                <p>{data.length ?? data.meanings[0].definitions[0].definition}</p>
+               {data.length === 0 ? <>search a word to see it's definition</>: <p>{data.length ?? data.meanings[0].definitions[0].definition}</p>}
             </div>
             <button onClick={handleFavouriteClick}>Add to Favourites</button>
 
