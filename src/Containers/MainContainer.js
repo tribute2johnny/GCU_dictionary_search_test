@@ -1,17 +1,29 @@
 import React, { useState , useEffect} from "react";
 import Axios from 'axios';
+import FavouritesList from "../Components/FavouritesList";
 
 const MainContainer = () => {
 
     const [data, setData] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    const [favouriteWords, setFavouriteWords] = useState([]);
 
     const getMeaning = () => {
         Axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchTerm}`)
         .then((res) => {
             setData(res.data[0]);
         });
-        
+    }
+
+    const addFavourite = (word) => {
+        const newFavourite = [...favouriteWords, word];
+        if (favouriteWords.includes(word) === false) {
+            setFavouriteWords(newFavourite)
+        }
+    }
+
+    const handleFavouriteClick = () => {
+        addFavourite(data)
     }
 
     return (
@@ -24,15 +36,20 @@ const MainContainer = () => {
                 }}
                 />
 
-            <button onClick={ () => {
+                <button onClick={ () => {
                 getMeaning();
-            }}
-            >search</button>
+                }}
+                >search</button>
             </div>
 
             <div>
                 <h4>{data.word}</h4>
                 <p>{data.length ?? data.meanings[0].definitions[0].definition}</p>
+            </div>
+            <button onClick={handleFavouriteClick}>Add to Favourites</button>
+
+            <div>
+                <FavouritesList favouriteWords={favouriteWords} />
             </div>
         </div>
     )
