@@ -23,6 +23,11 @@ const MainContainer = () => {
                     setSearchTerm(input.target.value)
                 }}
                 />
+
+            <button onClick={ () => {
+                getMeaning();
+            }}
+            >search</button>
             </div>
 
             <div>
