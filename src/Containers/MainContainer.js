@@ -32,6 +32,7 @@ const MainContainer = () => {
 
             <div>
                 <h4>{data.word}</h4>
+                <p>{data.length ?? data.meanings[0].definitions[0].definition}</p>
             </div>
         </div>
     )
