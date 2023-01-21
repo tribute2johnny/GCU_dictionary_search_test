@@ -1,6 +1,7 @@
 import React, { useState , useEffect} from "react";
 import Axios from 'axios';
 import FavouritesList from "../Components/FavouritesList";
+import "./MainContainer.css";
 
 const MainContainer = () => {
 
@@ -25,6 +26,13 @@ const MainContainer = () => {
     const handleFavouriteClick = () => {
         addFavourite(data)
     }
+
+    useEffect(() => {
+        const favouriteWords = JSON.parse(localStorage.getItem('favs'));
+        if (favouriteWords) {
+            setFavouriteWords(favouriteWords);
+        }
+    }, [])
 
     useEffect(() => {
         if (favouriteWords.length > 0) {localStorage.setItem('favs', JSON.stringify(favouriteWords))}
