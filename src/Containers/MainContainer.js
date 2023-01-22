@@ -72,7 +72,7 @@ const MainContainer = () => {
                     </div>
                 </div>
             </div>
-            <footer className="footer">This application was made using the free Dictionary API <a href="https://dictionaryapi.dev/">https://dictionaryapi.dev/</a></footer>
+            <footer className="footer">This application was made using the Free Dictionary API :  <a href="https://dictionaryapi.dev/">https://dictionaryapi.dev/</a></footer>
         </div>
     )
 
