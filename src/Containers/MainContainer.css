@@ -1,0 +1,88 @@
+.header1 {
+    font-size: 50px;
+    font-family: 'Libre Baskerville', serif;
+    background-color: rgb(132, 199, 178);
+    display: flex;
+    justify-content: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    border-bottom: 1px solid black;
+}
+
+.header2 {
+    font-size: 50px;
+    font-family: 'Libre Baskerville', serif;
+    background-color: rgb(132, 199, 178);
+    display: flex;
+    justify-content: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    margin-top: 0%;
+    border-bottom: 1px solid black;
+}
+
+.body {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.maincontainer {
+    border: 2px black solid;
+    min-height: 90vh;
+    min-width: 90vw;
+    display: flex;
+}
+
+.search {
+    border: 1px black solid;
+    min-height: 95vh;
+    min-width: 50vw;
+}
+
+.favslist {
+    border: 1px black solid;
+    min-height: 95vh;
+    min-width: 50vw;
+}
+
+.searchcontainer {
+    margin-top: 8%;
+}
+
+.searchbar {
+    height: 2em;
+    width: 16em;
+    box-shadow: 2px 2px 4px rgba( 0, 0, 0, 0.2 );
+}
+
+.searchbutton {
+    height: 2.4em;
+    width: 6em;
+    box-shadow: 2px 2px 4px rgba( 0, 0, 0, 0.2 );
+    font-family: 'Libre Baskerville', serif;
+    background-color: rgb(132, 199, 178);
+}
+
+.searchresult {
+    margin-top: 10%;
+}
+
+.defresult {
+    font-size: 25px;
+}
+
+.wordresult {
+    font-size: 35px;
+}
+
+.favsbutton {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 20px;
+    background-color: rgb(132, 199, 178);
+    box-shadow: 2px 2px 4px rgba( 0, 0, 0, 0.2 );
+}
+
+.footer {
+    padding: 0.65%;
+    background-color: rgb(132, 199, 178);
+}
